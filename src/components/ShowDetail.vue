@@ -13,7 +13,7 @@
       <div class="right">
         <div class="detail__wrapper">
           <h1 class="detail__title">{{ show.name }}</h1>
-           <div class="detail__rating"> Rating: {{ show.rating.average}} </div>
+           <div class="detail__rating" v-if="show.rating.average"> Rating: {{ show.rating.average}} </div>
           <p class="detail__summary">{{ summary }}</p>
         </div>
       </div>
