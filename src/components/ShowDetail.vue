@@ -13,7 +13,8 @@
       <div class="right">
         <div class="detail__wrapper">
           <h1 class="detail__title">{{ show.name }}</h1>
-           <div class="detail__rating" v-if="show.rating.average"> Rating: {{ show.rating.average}} </div>
+           <Genre :genre="show.genres[0]" />
+           <Rating :rating="show.rating.average" />
           <p class="detail__summary">{{ summary }}</p>
         </div>
       </div>
@@ -25,6 +26,8 @@
 import { mapGetters, mapState } from 'vuex'
 import FadeLoader from 'vue-spinner/src/FadeLoader.vue'
 import PrimaryButton from '../common/PrimaryButton.vue'
+import Rating from '../common/Rating.vue'
+import Genre from '../common/Genre.vue'
 
 export default {
   name: 'ShowDetail',
@@ -39,7 +42,9 @@ export default {
   },
   components: {
     FadeLoader,
-    PrimaryButton
+    PrimaryButton,
+    Rating,
+    Genre
   },
   created () {
     this.fetchShowDetails()

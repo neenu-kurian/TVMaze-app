@@ -7,9 +7,8 @@
           <img class="show__img" v-else src="../assets/images/default.jpeg" alt="fallback" />
           <div class="show__details">
           <h2 class="show__title">{{name}}</h2>
-          <span class="show__genre" v-if="genres.length">{{genres[0]}}</span>
-          <img src="../assets/images/star-regular.png" alt="rating"  v-if="rating.average" class="show__rating--icon"/>
-          <span v-if="rating.average" class="show__rating">{{rating.average}}</span>
+          <Genre :genre="genres[0]" />
+          <Rating :rating="rating.average" />
           </div>
         </router-link>
       </div>
@@ -19,12 +18,18 @@
 
 <script>
 import { mapState } from 'vuex'
+import Rating from './Rating.vue'
+import Genre from './Genre.vue'
 
 export default {
   name: 'ShowCard',
   computed: {
     ...mapState(['loading'])
   },
-  props: ['shows']
+  props: ['shows'],
+  components: {
+    Rating,
+    Genre
+  }
 }
 </script>
