@@ -17,7 +17,8 @@
       class="show__spinner"
     ></fade-loader>
 
-    <show-card :shows="shows"></show-card>
+    <show-card v-if="shows.length" :shows="shows"></show-card>
+    <results-error v-else></results-error>
   </div>
 </template>
 
@@ -26,6 +27,8 @@ import { mapGetters, mapState } from 'vuex'
 import ShowCard from '../common/ShowCard.vue'
 import PrimaryButton from '../common/PrimaryButton.vue'
 import FadeLoader from 'vue-spinner/src/FadeLoader.vue'
+import ResultsError from '@/common/ResultsError.vue'
+
 export default {
   name: 'SearchPage',
   data: function () {
@@ -42,11 +45,15 @@ export default {
     this.search = this.searchText
     this.fetchTvShows()
   },
-  components: { PrimaryButton, FadeLoader, ShowCard },
+  components: { PrimaryButton, FadeLoader, ShowCard, ResultsError },
   methods: {
     searchShows () {
       this.$store.commit('SET_SEARCH', this.search)
-      this.fetchSearchResults()
+      if (this.search) {
+        this.fetchSearchResults()
+      } else {
+        this.fetchTvShows()
+      }
     },
     fetchTvShows () {
       this.$store.dispatch('fetchTvShows')
