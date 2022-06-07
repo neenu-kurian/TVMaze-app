@@ -39,11 +39,15 @@ export default {
   },
   computed: {
     ...mapState(['loading']),
-    ...mapGetters(['shows'])
+    ...mapGetters(['shows', 'searchText'])
   },
   created () {
     this.search = this.searchText
-    this.fetchTvShows()
+    if (this.search !== '') {
+      this.fetchSearchResults()
+    } else {
+      this.fetchTvShows()
+    }
   },
   components: { PrimaryButton, FadeLoader, ShowCard, ResultsError },
   methods: {

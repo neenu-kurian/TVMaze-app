@@ -6,10 +6,10 @@ const routes = [
   {
     path: '/',
     component: HomePage,
-    redirect: '/search'
+    redirect: '/show'
   },
   {
-    path: '/search/:searchtext?',
+    path: '/show',
     component: HomePage
   },
   {
