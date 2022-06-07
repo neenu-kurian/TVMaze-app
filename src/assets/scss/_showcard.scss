@@ -26,4 +26,12 @@
         text-decoration: none;
         color: black;
     }
+
+    &__genre {
+        color: $white;
+        padding: 5px 10px;
+        margin: 5px;
+        background-color: orange;
+        border-radius: 15px;
+    }
 }

@@ -1,11 +1,14 @@
 <template>
   <div class="show__container">
     <div class="show__wrapper">
-      <div class="show__tile" v-for="({name,image,id},index) in shows" :key="index">
+      <div class="show__tile" v-for="({name,image,id,genres},index) in shows" :key="index">
         <router-link class="show__link" :to="`/show/${id}`">
           <img class="show__img" v-if="image!==null" :src="image.original" alt="show" />
           <img class="show__img" v-else src="../assets/images/default.jpeg" alt="fallback" />
+          <div>
           <h2 class="show__title">{{name}}</h2>
+          <span class="show__genre" v-if="genres.length">{{genres[0]}}</span>
+          </div>
         </router-link>
       </div>
     </div>

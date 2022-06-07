@@ -14,7 +14,7 @@
         <div class="detail__wrapper">
           <h1 class="detail__title">{{ show.name }}</h1>
            <div class="detail__rating"> Rating: {{ show.rating.average}} </div>
-          <p class="detail__summary">{{show.summary}}</p>
+          <p class="detail__summary">{{ summary }}</p>
         </div>
       </div>
     </div>
@@ -34,7 +34,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['show']),
+    ...mapGetters(['show', 'summary']),
     ...mapState(['loading'])
   },
   components: {
