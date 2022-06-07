@@ -8,7 +8,8 @@
     <div class="detail__container" v-if="!loading">
       <div class="left">
         <PrimaryButton type="text" name="back" class="btn__back">Back</PrimaryButton>
-        <img class="detail__image" :src="show.image.original" alt="show" />
+        <img class="detail__image" v-if="show.image" :src="show.image.original" alt="show" />
+        <img class="detail__image" v-else src="../assets/images/default.jpeg" alt="fallback" />
       </div>
       <div class="right">
         <div class="detail__wrapper">
