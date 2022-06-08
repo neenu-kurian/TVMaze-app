@@ -1,6 +1,6 @@
 <template>
   <div class="show__container">
-    <div class="show__wrapper">
+    <div class="show__wrapper grid">
       <div class="show__tile" v-for="({name,image,id,genres,rating},index) in shows" :key="index">
         <router-link class="show__link" :to="`/show/${id}`">
           <img class="show__img img__original" v-if="image!==null" :src="image.original" alt="show" />

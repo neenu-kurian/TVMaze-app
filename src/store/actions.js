@@ -5,7 +5,6 @@ const actions = {
     try {
       state.loading = true
       const url = `${apiUrl}?page=1`
-      console.log(url)
       const res = await fetch(url)
       const data = await res.json()
       state.loading = false

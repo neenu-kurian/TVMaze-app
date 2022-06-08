@@ -1,7 +1,7 @@
 <template>
-  <div class="notfound__container">
+  <div class="notfound__container flex-center">
     <div class="notfound__img">
-        <img src="../assets/images/sad-face.jpeg" alt="sad-face" class="sad-image"/>
+        <img src="../assets/images/sad-face.jpeg" alt="sad-face" class="full-width"/>
     </div>
     <div class="notfound__text">
       <h1 class="notfound__title">Page Not Found</h1>

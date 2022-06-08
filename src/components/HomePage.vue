@@ -1,7 +1,7 @@
 /* eslint-disable quotes */
 <template>
   <div class="search__container">
-    <form class="search__wrapper" @submit.prevent="searchShows">
+    <form class="search__wrapper center" @submit.prevent="searchShows">
       <input
         type="text"
         v-model="search"

@@ -1,5 +1,5 @@
 <template>
-  <button :type="type" class="btn--primary" :name="name" @click="handleClick">
+  <button :type="type" class="btn--primary uppercase" :name="name" @click="handleClick">
     <slot>Search</slot>
   </button>
 </template>
