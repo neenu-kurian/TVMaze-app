@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the component correctly 1`] = `<div class="show__rating--wrapper"><img src="../assets/images/star-regular.png" alt="rating" class="show__rating--icon"> <span class="show__rating">10</span></div>`;

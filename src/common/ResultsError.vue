@@ -4,7 +4,7 @@
          <img src="../assets/images/sad-face.jpeg" alt="sad-face" class="sad-image"/>
     </div>
     <div class="error__text">
-        <error-text>Sorry, we couldnt find any results. Please try another movie</error-text>
+        <error-text>Sorry, we couldnt find any results. Please try another tv show</error-text>
       </div>
     </div>
 </template>

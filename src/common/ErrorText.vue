@@ -1,6 +1,6 @@
 <template>
   <p class="error__message">
-    <slot>Oops, looks like there are too many results, Please try to refine your search</slot>
+    <slot>Sorry, we couldnt find any results. Please try another tv show</slot>
   </p>
 </template>
 

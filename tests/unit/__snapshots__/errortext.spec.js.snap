@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders component correctly 1`] = `<p class="error__message">Sorry, we couldnt find any results. Please try another tv show</p>`;
