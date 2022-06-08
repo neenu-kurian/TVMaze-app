@@ -20,3 +20,9 @@ it('renders the component correctly', () => {
 
   expect(wrapper).toMatchSnapshot()
 })
+
+it('doesnt render the rating if not present', () => {
+  const wrapper = mount(Rating)
+
+  expect(wrapper.find('.show__rating--wrapper').exists()).toBe(false)
+})

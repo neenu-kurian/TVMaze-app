@@ -9,6 +9,18 @@ it('displays message', () => {
   )
 })
 
+it('displays slot text correctly', () => {
+  const wrapper = mount(ErrorText, {
+    slots: {
+      default: 'Something went wrong'
+    }
+  })
+
+  expect(wrapper.text()).toContain(
+    'Something went wrong'
+  )
+})
+
 it('renders component correctly', () => {
   const wrapper = mount(ErrorText)
 
