@@ -1,0 +1,14 @@
+.show {
+    &__rating {
+        &--wrapper {
+            display: inline-block;
+        }
+        &--icon {
+            width: 20px;
+            position: relative;
+            top: 4px;
+            margin-left: 5px;
+        }
+        color: $white;
+    }
+}
