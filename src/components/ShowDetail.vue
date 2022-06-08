@@ -8,7 +8,7 @@
     <div class="detail__container grid" v-if="!loading">
       <div class="left">
         <PrimaryButton type="text" name="back" class="btn__back left uppercase">Back</PrimaryButton>
-        <img class="detail__image full-width" v-if="show.image" :src="show.image.original" alt="show" />
+        <img class="detail__image full-width" v-if="show.image" :src="show.image.original" :alt="show.name" />
         <img class="detail__image full-width" v-else src="../assets/images/default.jpeg" alt="fallback" />
       </div>
       <div class="right">

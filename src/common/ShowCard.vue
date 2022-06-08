@@ -3,10 +3,10 @@
     <div class="show__wrapper grid">
       <div class="show__tile" v-for="({name,image,id,genres,rating},index) in shows" :key="index">
         <router-link class="show__link" :to="`/show/${id}`">
-          <img class="show__img img__original" v-if="image!==null" :src="image.original" alt="show" />
-          <img class="show__img img__fallback" v-else src="../assets/images/default.jpeg" alt="fallback" />
+          <img class="show__img img__original" v-if="image!==null" :src="image.original" :alt="name" />
+          <img class="show__img img__fallback" v-else src="../assets/images/default.jpeg" alt="default" />
           <div class="show__details">
-          <h2 class="show__title">{{name}}</h2>
+          <h1 class="show__title">{{name}}</h1>
           <Genre :genre="genres[0]" />
           <Rating :rating="rating.average" />
           </div>
