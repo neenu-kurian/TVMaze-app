@@ -1,6 +1,6 @@
-import HomePage from '../components/HomePage'
-import NotFoundPage from '../components/NotFoundPage'
-import ShowDetail from '../components/ShowDetail'
+import HomePage from '@/components/HomePage'
+import NotFoundPage from '@/components/NotFoundPage'
+import ShowDetail from '@/components/ShowDetail'
 
 const routes = [
   {

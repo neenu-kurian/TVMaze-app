@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils'
-import ErrorText from '../../src/common/ErrorText'
+import ErrorText from '@/common/ErrorText'
 
 it('displays message', () => {
   const wrapper = mount(ErrorText)

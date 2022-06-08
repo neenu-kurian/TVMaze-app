@@ -14,7 +14,7 @@ export default {
   methods: {
     handleClick () {
       if (this.name === 'back') {
-        this.$router.go(-1)
+        this.$router.push('/show')
       }
     }
   }

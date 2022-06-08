@@ -26,9 +26,9 @@
 <script>
 import { mapGetters, mapState } from 'vuex'
 import FadeLoader from 'vue-spinner/src/FadeLoader.vue'
-import PrimaryButton from '../common/PrimaryButton.vue'
-import Rating from '../common/Rating.vue'
-import Genre from '../common/Genre.vue'
+import PrimaryButton from '@/common/PrimaryButton.vue'
+import Rating from '@/common/Rating.vue'
+import Genre from '@/common/Genre.vue'
 
 export default {
   name: 'ShowDetail',

@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils'
-import Rating from '../../src/common/Rating'
+import Rating from '@/common/Rating'
 
 it('displays rating correctly', () => {
   const wrapper = mount(Rating, {

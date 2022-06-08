@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import ErrorText from '../common/ErrorText.vue'
+import ErrorText from '@/common/ErrorText.vue'
 export default {
   components: { ErrorText },
   name: 'NotFoundPage'

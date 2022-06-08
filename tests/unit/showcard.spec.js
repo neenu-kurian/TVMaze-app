@@ -1,5 +1,5 @@
 import { createLocalVue, mount, RouterLinkStub } from '@vue/test-utils'
-import ShowCard from '../../src/common/ShowCard'
+import ShowCard from '@/common/ShowCard'
 import Vuex from 'vuex'
 
 const localVue = createLocalVue()

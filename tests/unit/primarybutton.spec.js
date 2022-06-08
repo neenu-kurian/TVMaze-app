@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils'
-import PrimaryButton from '../../src/common/PrimaryButton'
+import PrimaryButton from '@/common/PrimaryButton'
 
 it('displays button text based on slot text', () => {
   const wrapper = mount(PrimaryButton, {
@@ -20,3 +20,16 @@ it('renders the component correctly', () => {
 
   expect(wrapper).toMatchSnapshot()
 })
+
+// test('triggers a click', async () => {
+//   const wrapper = mount(PrimaryButton)
+//   const $route = {
+//     name: 'show'
+//   }
+
+//   await wrapper.find('button').trigger('click')
+
+  
+
+//   expect(wrapper.vm.$route.path).toBe($route.name)
+// })

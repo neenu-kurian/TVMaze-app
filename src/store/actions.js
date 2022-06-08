@@ -1,8 +1,11 @@
+import { apiUrl, apiSearchUrl } from '../constants'
+
 const actions = {
   async fetchTvShows ({ commit, state }) {
     try {
       state.loading = true
-      const url = 'https://api.tvmaze.com/shows?page=1'
+      const url = `${apiUrl}?page=1`
+      console.log(url)
       const res = await fetch(url)
       const data = await res.json()
       state.loading = false
@@ -14,7 +17,7 @@ const actions = {
   async fetchShowDetails ({ commit, state }, payload) {
     try {
       state.loading = true
-      const url = `https://api.tvmaze.com/shows/${payload}`
+      const url = `${apiUrl}/${payload}`
       const res = await fetch(url)
       const data = await res.json()
       state.loading = false
@@ -26,7 +29,7 @@ const actions = {
   async fetchSearchResults ({ commit, state }) {
     try {
       state.loading = true
-      const url = `https://api.tvmaze.com/search/shows?q=${state.searchText}`
+      const url = `${apiSearchUrl}?q=${state.searchText}`
       const res = await fetch(url)
       const data = await res.json()
       state.loading = false

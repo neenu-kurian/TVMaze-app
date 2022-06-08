@@ -24,8 +24,8 @@
 
 <script>
 import { mapGetters, mapState } from 'vuex'
-import ShowCard from '../common/ShowCard.vue'
-import PrimaryButton from '../common/PrimaryButton.vue'
+import ShowCard from '@/common/ShowCard.vue'
+import PrimaryButton from '@/common/PrimaryButton.vue'
 import FadeLoader from 'vue-spinner/src/FadeLoader.vue'
 import ResultsError from '@/common/ResultsError.vue'
 

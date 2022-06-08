@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils'
-import Genre from '../../src/common/Genre'
+import Genre from '@/common/Genre'
 
 it('displays genre correctly', () => {
   const wrapper = mount(Genre, {
