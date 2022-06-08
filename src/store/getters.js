@@ -2,7 +2,7 @@
 const getters = {
   show: (state) => state.show,
   shows: (state) => state.shows,
-  summary: (state) => state.show.summary.replace(/(<([^>]+)>)/ig, ''),
+  summary: (state) => state.show.summary ? state.show.summary.replace(/(<([^>]+)>)/ig, '') : 'No summary available',
   searchText: (state) => state.searchText
 }
 
