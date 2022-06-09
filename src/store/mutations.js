@@ -6,6 +6,9 @@ const mutations = {
   GET_SHOW (state, payload) {
     state.show = payload;
   },
+  CLEAR_SHOWS (state) {
+    state.shows = [{}];
+  },
   CLEAR_SHOW_DETAILS (state) {
     state.show = {};
   },

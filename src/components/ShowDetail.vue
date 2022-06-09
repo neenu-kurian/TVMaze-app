@@ -49,6 +49,7 @@ export default {
   },
   methods: {
     fetchShowDetails () {
+      // fetch details of the show and go to detail page
       this.$store.dispatch('fetchShowDetails', this.$route.params.id)
     }
   }

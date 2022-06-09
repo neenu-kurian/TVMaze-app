@@ -1,3 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ErrorText renders component correctly 1`] = `<p class="error__message">Sorry, we couldnt find any results. Please try another tv show</p>`;
+
+exports[`Errortext renders component correctly 1`] = `<p class="error__message">Sorry, we couldnt find any results. Please try another tv show</p>`;
+
+exports[`errortext renders component correctly 1`] = `<p class="error__message">Sorry, we couldnt find any results. Please try another tv show</p>`;
+
 exports[`renders component correctly 1`] = `<p class="error__message">Sorry, we couldnt find any results. Please try another tv show</p>`;

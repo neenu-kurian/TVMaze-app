@@ -38,6 +38,8 @@ export default {
   },
   created () {
     this.search = this.searchText
+
+    // if no text is entered, show default results, else show result for search text
     if (this.search !== '') {
       this.fetchSearchResults()
     } else {
@@ -45,9 +47,13 @@ export default {
     }
   },
   components: { PrimaryButton, ShowCard, ResultsError },
+  beforeDestroy () {
+    this.$store.commit('CLEAR_SHOWS')
+  },
   methods: {
     searchShows () {
       this.$store.commit('SET_SEARCH', this.search)
+      // if no text is entered, show default results, else show result for search text
       if (this.search) {
         this.fetchSearchResults()
       } else {
@@ -55,9 +61,11 @@ export default {
       }
     },
     fetchTvShows () {
+      // to fetch some default shows
       this.$store.dispatch('fetchTvShows')
     },
     fetchSearchResults () {
+      // to fetch result of search text
       this.$store.dispatch('fetchSearchResults')
     }
 

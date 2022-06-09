@@ -1,3 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Genre renders the component correctly 1`] = `<div class="show__genre--wrapper"><span class="show__genre">drama</span></div>`;
+
 exports[`renders the component correctly 1`] = `<div class="show__genre--wrapper"><span class="show__genre">drama</span></div>`;

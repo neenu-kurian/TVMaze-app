@@ -95,7 +95,7 @@ describe('HomePage', () => {
     expect(wrapper.find('.loader').exists()).toBe(false)
   })
 
-  it('render shows only if it is not empty', () => {
+  it('render shows tiles only if it is not empty', () => {
     const wrapper = mount(HomePage, {
       store,
       localVue,

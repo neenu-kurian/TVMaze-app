@@ -1,3 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`PrimaryButton renders the component correctly 1`] = `<button type="submit" class="btn--primary uppercase">Search</button>`;
+
 exports[`renders the component correctly 1`] = `<button type="submit" class="btn--primary uppercase">Search</button>`;
