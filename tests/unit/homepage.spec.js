@@ -15,7 +15,8 @@ describe('HomePage', () => {
       SET_SEARCH: jest.fn()
     }
     actions = {
-      fetchSearchResults: jest.fn()
+      fetchSearchResults: jest.fn(),
+      fetchShowDetails: jest.fn()
     }
     getters = {
       shows: () => [
@@ -29,7 +30,7 @@ describe('HomePage', () => {
             average: 8
           }
         }],
-      searchText: () => ' '
+      searchText: () => 'test'
     }
     store = new Vuex.Store({
       mutations,
@@ -104,4 +105,38 @@ describe('HomePage', () => {
     })
     expect(wrapper.find('.show__container').exists()).toBe(true)
   })
+
+  it('dispatches an action when user searches something', () => {
+    const wrapper = mount(HomePage, {
+      store,
+      localVue,
+      stubs: {
+        RouterLink: RouterLinkStub
+      }
+    })
+
+    wrapper.find('button').trigger('click')
+    expect(actions.fetchSearchResults.mock.calls).toHaveLength(1)
+  })
+
+  //   it('dispatches an action when user clicks on the tv shows tile', () => {
+  //     const $route = {
+  //         path: '/show/1'
+  //       }
+
+  //     const wrapper = mount(HomePage, {
+  //       store,
+  //       getters,
+  //       localVue,
+  //       stubs: {
+  //         RouterLink: RouterLinkStub
+  //       },
+  //       mocks: {
+  //         $route
+  //       }
+  //     })
+
+  //     wrapper.find('.show__tile').trigger('click')
+  //     expect(actions.fetchShowDetails.mock.calls).toHaveLength(1)
+  //   })
 })
