@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders the component correctly 1`] = `
-<div class="error__wrapper">
-  <div class="error__image"><img src="../assets/images/sad-face.jpeg" alt="sad-face" class="sad-image"></div>
+exports[`ResultsError.vue renders the component correctly 1`] = `
+<div class="error__wrapper flex-center">
+  <div class="error__image"><img src="../assets/images/sad-face.jpeg" alt="sad-face" class="full-width"></div>
   <div class="error__text">
     <p class="error__message">Sorry, we couldnt find any results. Please try another tv show</p>
   </div>

@@ -6,7 +6,7 @@
           <img class="show__img img__original" v-if="image!==null" :src="image.original" :alt="name" />
           <img class="show__img img__fallback" v-else src="../assets/images/default.jpeg" alt="default" />
           <div class="show__details">
-          <h1 class="show__title">{{name}}</h1>
+          <h1 class="show__title" v-if="name">{{name}}</h1>
           <Genre :genre="genres[0]" />
           <Rating :rating="rating.average" />
           </div>

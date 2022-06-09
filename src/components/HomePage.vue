@@ -17,7 +17,7 @@
       class="show__spinner"
     ></fade-loader>
 
-    <show-card v-if="shows.length" :shows="shows"></show-card>
+    <show-card v-if="shows.length && !error" :shows="shows"></show-card>
     <results-error v-else></results-error>
   </div>
 </template>
@@ -38,7 +38,7 @@ export default {
     }
   },
   computed: {
-    ...mapState(['loading']),
+    ...mapState(['loading', 'error']),
     ...mapGetters(['shows', 'searchText'])
   },
   created () {

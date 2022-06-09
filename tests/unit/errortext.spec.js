@@ -1,7 +1,7 @@
 import { mount } from '@vue/test-utils'
 import ErrorText from '@/common/ErrorText'
 
-it('displays message', () => {
+it('displays message correctly', () => {
   const wrapper = mount(ErrorText)
 
   expect(wrapper.text()).toContain(

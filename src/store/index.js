@@ -12,7 +12,8 @@ const store = new Vuex.Store({
     shows: {},
     loading: false,
     show: {},
-    searchText: ''
+    searchText: '',
+    error: false
   },
   getters: getters,
   mutations: mutations,

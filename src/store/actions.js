@@ -11,6 +11,8 @@ const actions = {
       commit('GET_SHOWS', data.slice(0, 10))
     } catch (err) {
       console.log(err)
+      state.error = true
+      state.loading = false
     }
   },
   async fetchShowDetails ({ commit, state }, payload) {
@@ -23,6 +25,8 @@ const actions = {
       commit('GET_SHOW', data)
     } catch (err) {
       console.log(err)
+      state.error = true
+      state.loading = false
     }
   },
   async fetchSearchResults ({ commit, state }) {
@@ -38,6 +42,8 @@ const actions = {
       commit('GET_SHOWS', results)
     } catch (err) {
       console.log(err)
+      state.error = true
+      state.loading = false
     }
   }
 
