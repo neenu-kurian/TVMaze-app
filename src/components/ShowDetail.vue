@@ -1,10 +1,6 @@
 <template>
   <div class="detail__show">
-    <fade-loader
-      :loading="loading"
-      :color="color"
-      class="show__spinner"
-    ></fade-loader>
+    <div class="loader" v-if="loading"></div>
     <div class="detail__container grid" v-if="!loading">
       <div class="left">
         <PrimaryButton type="text" name="back" class="btn__back left uppercase">Back</PrimaryButton>
@@ -25,7 +21,6 @@
 
 <script>
 import { mapGetters, mapState } from 'vuex'
-import FadeLoader from 'vue-spinner/src/FadeLoader.vue'
 import PrimaryButton from '@/common/PrimaryButton.vue'
 import Rating from '@/common/Rating.vue'
 import Genre from '@/common/Genre.vue'
@@ -42,7 +37,6 @@ export default {
     ...mapState(['loading'])
   },
   components: {
-    FadeLoader,
     PrimaryButton,
     Rating,
     Genre

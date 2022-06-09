@@ -20,16 +20,3 @@ it('renders the component correctly', () => {
 
   expect(wrapper).toMatchSnapshot()
 })
-
-// test('triggers a click', async () => {
-//   const wrapper = mount(PrimaryButton)
-//   const $route = {
-//     name: 'show'
-//   }
-
-//   await wrapper.find('button').trigger('click')
-
-  
-
-//   expect(wrapper.vm.$route.path).toBe($route.name)
-// })

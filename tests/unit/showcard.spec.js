@@ -1,16 +1,23 @@
 import { createLocalVue, mount, RouterLinkStub } from '@vue/test-utils'
-import ShowCard from '@/common/ShowCard'
+import ShowCard from '../../src/common/ShowCard'
 import Vuex from 'vuex'
 
 const localVue = createLocalVue()
 localVue.use(Vuex)
 
 describe('ShowCard.vue', () => {
+  let store
+  beforeEach(() => {
+    store = new Vuex.Store()
+  })
+
   it('renders images for tv shows', () => {
     const wrapper = mount(ShowCard, {
+      store,
       propsData: {
         shows: [
           {
+            name: 'Downton Abbey',
             image: {
               original: 'https://static.tvmaze.com/uploads/images/original_untouched/1/4601.jpg'
             },
@@ -30,11 +37,13 @@ describe('ShowCard.vue', () => {
     expect(wrapper.find('.img__original').exists()).toBe(true)
   })
 
-  it('renders fallback image for tv shows if image is not available', () => {
+  it('renders fallback image for tv shows', () => {
     const wrapper = mount(ShowCard, {
+      store,
       propsData: {
         shows: [
           {
+            name: 'Downton Abbey',
             image: null,
             genres: ['comedy', 'drama'],
             rating: {
@@ -54,9 +63,11 @@ describe('ShowCard.vue', () => {
 
   it('doesnt render genres for tv shows if it is not present', () => {
     const wrapper = mount(ShowCard, {
+      store,
       propsData: {
         shows: [
           {
+            name: 'Downton Abbey',
             image: {
               original: 'https://static.tvmaze.com/uploads/images/original_untouched/1/4601.jpg'
             },
@@ -78,9 +89,11 @@ describe('ShowCard.vue', () => {
 
   it('doesnt render rating for tv shows if it is not present', () => {
     const wrapper = mount(ShowCard, {
+      store,
       propsData: {
         shows: [
           {
+            name: 'Downton Abbey',
             image: {
               original: 'https://static.tvmaze.com/uploads/images/original_untouched/1/4601.jpg'
             },
@@ -101,6 +114,7 @@ describe('ShowCard.vue', () => {
 
   it('displays the title correctly for tv shows', () => {
     const wrapper = mount(ShowCard, {
+      store,
       propsData: {
         shows: [
           {
